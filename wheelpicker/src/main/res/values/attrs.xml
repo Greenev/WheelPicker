@@ -8,6 +8,7 @@
         <attr name="wheelPickerInfiniteScrolling" format="boolean"/>
         <attr name="wheelPickerScaleDownEnabled" format="boolean"/>
         <attr name="wheelPickerShowDivider" format="boolean"/>
+        <attr name="wheelPickerDividerWidthRatio" format="float"/>
 
         <!-- Items -->
         <attr name="wheelPickerItems" format="reference"/>

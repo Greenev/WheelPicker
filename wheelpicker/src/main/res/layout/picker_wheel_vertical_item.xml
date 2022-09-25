@@ -11,7 +11,7 @@
         android:id="@+id/wp_top_border"
         android:layout_width="match_parent"
         android:layout_height="@dimen/wp_divider_height"
-        android:layout_gravity="start"
+        android:layout_gravity="center"
         android:background="@android:color/black"/>
 
     <TextView
@@ -30,6 +30,6 @@
         android:id="@+id/wp_bottom_border"
         android:layout_width="match_parent"
         android:layout_height="@dimen/wp_divider_height"
-        android:layout_gravity="end"
+        android:layout_gravity="center"
         android:background="@android:color/black"/>
 </LinearLayout>

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.github.vikramezhil.wheelpicker.R
 import com.github.vikramezhil.wheelpicker.props.OnWheelPickerListener
 import com.github.vikramezhil.wheelpicker.props.WheelPickerProperties
+import kotlin.math.roundToInt
 
 /**
  * Wheel Picker Adapter
@@ -52,7 +53,17 @@ class WPAdapter(private var context: Context, private var props: WheelPickerProp
         holder.bottomBorder.setBackgroundColor(props.dividerColor)
 
         val params = holder.itemVal.layoutParams
-        if (props.orientation == VERTICAL) { params.width = props.height } else { params.height = props.height }
+        if (props.orientation == VERTICAL) {
+            params.width = props.height
+            val dividerWidth = props.height * props.dividerWidthRatio
+            holder.topBorder.layoutParams.width = dividerWidth.roundToInt()
+            holder.bottomBorder.layoutParams.width = dividerWidth.roundToInt()
+        } else {
+            params.height = props.height
+            val dividerHeight = props.height * props.dividerWidthRatio
+            holder.topBorder.layoutParams.height = dividerHeight.roundToInt()
+            holder.bottomBorder.layoutParams.height = dividerHeight.roundToInt()
+        }
         holder.itemVal.layoutParams = params
         holder.itemVal.text = props.itemsList[position]
         holder.itemVal.textSize = props.itemsTxtSize

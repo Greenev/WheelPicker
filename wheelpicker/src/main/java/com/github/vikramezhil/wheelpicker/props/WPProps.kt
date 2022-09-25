@@ -25,6 +25,8 @@ data class WheelPickerProperties(
 
     var dividerColor: Int = Color.WHITE,
 
+    var dividerWidthRatio: Float = 1f,
+
     var enableItemHighlight: Boolean = true,
 
     var showDivider: Boolean = true,

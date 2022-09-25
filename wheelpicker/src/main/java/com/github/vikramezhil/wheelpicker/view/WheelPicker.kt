@@ -40,6 +40,7 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
                 // General
                 properties.background = typedArray.getDrawable(R.styleable.WheelPicker_wheelPickerBg) ?: properties.background
                 properties.dividerColor = typedArray.getInt(R.styleable.WheelPicker_wheelPickerDividerColor, properties.dividerColor)
+                properties.dividerWidthRatio = typedArray.getFloat(R.styleable.WheelPicker_wheelPickerDividerWidthRatio, properties.dividerWidthRatio)
                 properties.orientation = if(typedArray.getBoolean(R.styleable.WheelPicker_wheelPickerOrientationVertical, false)) {
                     VERTICAL
                 } else {
