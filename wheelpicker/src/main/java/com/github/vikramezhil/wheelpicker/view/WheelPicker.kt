@@ -301,4 +301,8 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
     fun getCurrentSelectedItemPosition(): Int {
         return properties.selectedItemPos
     }
+
+    fun getItemsList(): ArrayList<String> {
+        return properties.itemsList
+    }
 }
