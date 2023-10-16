@@ -25,6 +25,8 @@ data class WheelPickerProperties(
 
     var dividerColor: Int = Color.WHITE,
 
+    var dividerWidth: Int = context.resources.getDimensionPixelSize(R.dimen.wp_divider_width),
+
     var enableItemHighlight: Boolean = true,
 
     var showDivider: Boolean = true,

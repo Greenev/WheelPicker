@@ -4,6 +4,7 @@
         <!-- General -->
         <attr name="wheelPickerBg" format="reference|color"/>
         <attr name="wheelPickerDividerColor" format="color"/>
+        <attr name="wheelPickerDividerWidth" format="dimension"/>
         <attr name="wheelPickerOrientationVertical" format="boolean"/>
         <attr name="wheelPickerInfiniteScrolling" format="boolean"/>
         <attr name="wheelPickerScaleDownEnabled" format="boolean"/>

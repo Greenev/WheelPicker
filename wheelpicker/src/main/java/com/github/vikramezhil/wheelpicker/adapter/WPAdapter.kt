@@ -47,6 +47,13 @@ class WPAdapter(private var context: Context, private var props: WheelPickerProp
 
         holder.topBorder.visibility = if (itemSelected && props.showDivider) View.VISIBLE else View.INVISIBLE
         holder.topBorder.setBackgroundColor(props.dividerColor)
+        if (props.orientation == VERTICAL) {
+            holder.topBorder.layoutParams.width = props.dividerWidth
+            holder.bottomBorder.layoutParams.width = props.dividerWidth
+        } else {
+            holder.topBorder.layoutParams.height = props.dividerWidth
+            holder.bottomBorder.layoutParams.height = props.dividerWidth
+        }
 
         holder.bottomBorder.visibility = if (itemSelected && props.showDivider) View.VISIBLE else View.INVISIBLE
         holder.bottomBorder.setBackgroundColor(props.dividerColor)
