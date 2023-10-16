@@ -40,6 +40,7 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
                 // General
                 properties.background = typedArray.getDrawable(R.styleable.WheelPicker_wheelPickerBg) ?: properties.background
                 properties.dividerColor = typedArray.getInt(R.styleable.WheelPicker_wheelPickerDividerColor, properties.dividerColor)
+                properties.dividerWidth = typedArray.getDimensionPixelSize(R.styleable.WheelPicker_wheelPickerDividerWidth, properties.dividerWidth)
                 properties.orientation = if(typedArray.getBoolean(R.styleable.WheelPicker_wheelPickerOrientationVertical, false)) {
                     VERTICAL
                 } else {
@@ -304,5 +305,15 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
 
     fun getItemsList(): ArrayList<String> {
         return properties.itemsList
+    }
+
+    fun setItemsTextSize(size: Float) {
+        properties.itemsTxtSize = size
+        refreshWheelPicker()
+    }
+
+    fun setDividerWidth(width: Int) {
+        properties.dividerWidth = width
+        refreshWheelPicker()
     }
 }
