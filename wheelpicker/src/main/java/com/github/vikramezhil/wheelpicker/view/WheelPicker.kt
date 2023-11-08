@@ -316,4 +316,12 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
         properties.dividerWidth = width
         refreshWheelPicker()
     }
+
+    fun selectCurrentItem() {
+        getCurrentSelectedItem()?.let {
+            onWheelPickerListener?.onItemSelected(
+                getCurrentSelectedItemPosition(), it
+            )
+        }
+    }
 }
