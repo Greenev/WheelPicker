@@ -11,6 +11,8 @@ import android.widget.LinearLayout.VERTICAL
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.github.vikramezhil.wheelpicker.R
+import com.github.vikramezhil.wheelpicker.databinding.PickerWheelHorizontalItemBinding
+import com.github.vikramezhil.wheelpicker.databinding.PickerWheelVerticalItemBinding
 import com.github.vikramezhil.wheelpicker.props.OnWheelPickerListener
 import com.github.vikramezhil.wheelpicker.props.WheelPickerProperties
 
@@ -22,14 +24,15 @@ import com.github.vikramezhil.wheelpicker.props.WheelPickerProperties
 class WPAdapter(private var context: Context, private var props: WheelPickerProperties, private val listener: OnWheelPickerListener): RecyclerView.Adapter<WPAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val layout = if (props.orientation == VERTICAL) {
-            R.layout.picker_wheel_vertical_item
+        return if (props.orientation == VERTICAL) {
+            val binding = PickerWheelVerticalItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            binding.itemTextSize = parent.context.resources.getDimension(R.dimen.wp_txt_size)
+            ViewHolder(binding.root)
         } else {
-            R.layout.picker_wheel_horizontal_item
+            val binding = PickerWheelHorizontalItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            binding.itemTextSize = parent.context.resources.getDimension(R.dimen.wp_txt_size)
+            ViewHolder(binding.root)
         }
-
-        val view = LayoutInflater.from(parent.context).inflate(layout, parent, false)
-        return ViewHolder(view)
     }
 
     override fun getItemCount(): Int {
@@ -62,7 +65,6 @@ class WPAdapter(private var context: Context, private var props: WheelPickerProp
         if (props.orientation == VERTICAL) { params.width = props.height } else { params.height = props.height }
         holder.itemVal.layoutParams = params
         holder.itemVal.text = props.itemsList[position]
-        holder.itemVal.textSize = props.itemsTxtSize
 
         if (props.itemsTextStyle != 0) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

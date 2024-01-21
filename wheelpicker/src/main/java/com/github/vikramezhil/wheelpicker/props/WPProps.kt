@@ -45,8 +45,6 @@ data class WheelPickerProperties(
 
     var viewRefreshed: Boolean = false,
 
-    var itemsTxtSize: Float = context.resources.getDimension(R.dimen.wp_txt_size),
-
     var selectedItemTxtAlpha: Float = 1f,
 
     var unselectedItemsTxtAlpha: Float = 1f,

@@ -13,7 +13,6 @@
         <!-- Items -->
         <attr name="wheelPickerItems" format="reference"/>
         <attr name="wheelPickerItemsTextStyle" format="reference"/>
-        <attr name="wheelPickerItemsTextSize" format="dimension"/>
         <attr name="wheelPickerItemsTextBold" format="boolean"/>
         <attr name="wheelPickerItemsTextItalic" format="boolean"/>
         <attr name="wheelPickerItemsUnselectedTextAlpha" format="float"/>
