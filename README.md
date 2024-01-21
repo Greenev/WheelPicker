@@ -73,7 +73,6 @@ Add the following to the <dependencies> section of your pom.xml:
     app:wheelPickerItemsTextItalic="true"
     app:wheelPickerOrientationVertical="true"
     app:wheelPickerScaleDownEnabled="true"
-    app:wheelPickerItemsTextSize="8dp"
     app:wheelPickerItemsUnselectedTextAlpha="0.8"
     app:wheelPickerItems="@array/app_items"/>
 ```
@@ -94,7 +93,6 @@ Add the following to the <dependencies> section of your pom.xml:
     app:wheelPickerItemsTextItalic="true"
     app:wheelPickerOrientationVertical="false"
     app:wheelPickerScaleDownEnabled="true"
-    app:wheelPickerItemsTextSize="8dp"
     app:wheelPickerItemsUnselectedTextAlpha="0.8"
     app:wheelPickerItems="@array/app_items"/>
 ```

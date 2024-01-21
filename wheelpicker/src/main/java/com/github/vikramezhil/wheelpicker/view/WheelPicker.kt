@@ -54,7 +54,6 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
                 val items = typedArray.getResourceId(R.styleable.WheelPicker_wheelPickerItems, 0)
                 if (items != 0) { properties.itemsList = typedArray.resources.getStringArray(items).toCollection(ArrayList()) }
                 properties.itemsTextStyle = typedArray.getResourceId(R.styleable.WheelPicker_wheelPickerItemsTextStyle, properties.itemsTextStyle)
-                properties.itemsTxtSize = typedArray.getDimension(R.styleable.WheelPicker_wheelPickerItemsTextSize, properties.itemsTxtSize)
                 properties.itemsTxtBold = typedArray.getBoolean(R.styleable.WheelPicker_wheelPickerItemsTextBold, false)
                 properties.itemsTxtItalic = typedArray.getBoolean(R.styleable.WheelPicker_wheelPickerItemsTextItalic, false)
                 properties.unselectedItemsTxtAlpha = typedArray.getFloat(R.styleable.WheelPicker_wheelPickerItemsUnselectedTextAlpha, properties.unselectedItemsTxtAlpha)
@@ -305,11 +304,6 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
 
     fun getItemsList(): ArrayList<String> {
         return properties.itemsList
-    }
-
-    fun setItemsTextSize(size: Float) {
-        properties.itemsTxtSize = size
-        refreshWheelPicker()
     }
 
     fun setDividerWidth(width: Int) {
