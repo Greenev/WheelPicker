@@ -46,6 +46,7 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
                 } else {
                     HORIZONTAL
                 }
+                properties.isWide = typedArray.getBoolean(R.styleable.WheelPicker_wheelPickerWide, false)
                 properties.infiniteScrolling = typedArray.getBoolean(R.styleable.WheelPicker_wheelPickerInfiniteScrolling, false)
                 properties.scaleDownEnabled = typedArray.getBoolean(R.styleable.WheelPicker_wheelPickerScaleDownEnabled, false)
                 properties.showDivider = typedArray.getBoolean(R.styleable.WheelPicker_wheelPickerShowDivider, true)

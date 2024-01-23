@@ -61,7 +61,9 @@ data class WheelPickerProperties(
 
     var visibility: Int = View.VISIBLE,
 
-    var orientation: Int = HORIZONTAL
+    var orientation: Int = HORIZONTAL,
+
+    var isWide: Boolean = false
 )
 
 interface OnWheelPickerListener {
