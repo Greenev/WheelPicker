@@ -319,4 +319,9 @@ class WheelPicker@JvmOverloads constructor(context: Context, attrs: AttributeSet
             )
         }
     }
+
+    fun setWide(value: Boolean) {
+        properties.isWide = value
+        refreshWheelPicker()
+    }
 }
