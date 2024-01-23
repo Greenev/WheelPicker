@@ -61,6 +61,7 @@
                     app:wheelPickerItemsUnselectedTextAlpha="0.8"
                     app:wheelPickerItems="@array/app_items"
                     app:wheelPickerDefaultSelectedItemPos="3"
+                    app:wheelPickerWide="true"
                     app:items="@{viewModel.weightInKgs}"
                     app:selectedItemPosition="@{viewModel.initialWeightKgPosition}"
                     app:onWheelPickerListener="@{viewModel.onWeightValueSelectionListener}"/>

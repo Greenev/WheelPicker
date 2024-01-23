@@ -26,10 +26,19 @@ class WPAdapter(private var context: Context, private var props: WheelPickerProp
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return if (props.orientation == VERTICAL) {
             val binding = PickerWheelVerticalItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            binding.itemTextSize = parent.context.resources.getDimension(R.dimen.wp_txt_size)
+            binding.itemTextSize =
+                parent.context.resources.getDimension(
+                    if (props.isWide) R.dimen.wp_wide_txt_size
+                    else R.dimen.wp_txt_size
+                )
             ViewHolder(binding.root)
         } else {
             val binding = PickerWheelHorizontalItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            binding.itemTextSize =
+                parent.context.resources.getDimension(
+                    if (props.isWide) R.dimen.wp_wide_txt_size
+                    else R.dimen.wp_txt_size
+                )
             binding.itemTextSize = parent.context.resources.getDimension(R.dimen.wp_txt_size)
             ViewHolder(binding.root)
         }
